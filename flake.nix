@@ -1,0 +1,29 @@
+{
+  description = "Personal NixOS configuration";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs"; # this means "use the same nixpkgs I declared above"
+    };
+  };
+
+  outputs = { self, nixpkgs, home-manager, ... }: {
+    nixosConfigurations = {
+      victus = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/victus/default.nix                
+          home-manager.nixosModules.home-manager   
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.yourusername = import ./home/default.nix;
+          }
+        ];
+      };
+    };
+  };
+}
