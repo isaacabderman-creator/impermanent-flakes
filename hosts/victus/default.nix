@@ -74,8 +74,8 @@
     iputils
     kitty
     lshw
-    nvtopPackages.nvidia
     firefox
+    nvtopPackages.nvidia
     rubik
     nerd-fonts.ubuntu
     nerd-fonts.jetbrains-mono
@@ -116,6 +116,12 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [
+    intel-media-driver   # for newer Intel (Gen 8+)
+    intel-vaapi-driver   # older fallback
+    libva-vdpau-driver
+    libvdpau-va-gl
+  ];
   };
 
   # ── Wayland / NVIDIA env vars ─────────────────────────────────────────────
