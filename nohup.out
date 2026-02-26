@@ -1,0 +1,26 @@
+info: ghostty version=1.2.3
+info: ghostty build optimize=ReleaseFast
+info: runtime=apprt.Runtime.gtk
+info: font_backend=font.main.Backend.fontconfig_freetype
+info: dependency harfbuzz=12.1.0
+info: dependency fontconfig=21701
+info: renderer=renderer.generic.Renderer(renderer.OpenGL)
+info: libxev default backend=io_uring
+info(os_locale): setlocale from env result=LC_CTYPE=en_US.UTF-8;LC_NUMERIC=mg_MG.UTF-8;LC_TIME=mg_MG.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=mg_MG.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=mg_MG.UTF-8;LC_NAME=mg_MG.UTF-8;LC_ADDRESS=mg_MG.UTF-8;LC_TELEPHONE=mg_MG.UTF-8;LC_MEASUREMENT=mg_MG.UTF-8;LC_IDENTIFICATION=mg_MG.UTF-8
+info(gtk): GTK version build=4.20.3 runtime=4.20.3
+info(gtk): libadwaita version build=1.8.2 runtime=1.8.2
+info(config): creating template config file: path=/home/impermanent/.config/ghostty/config
+info(config): default shell src=passwd value=/run/current-system/sw/bin/bash
+info(config): default working directory src=passwd value=/home/impermanent
+warning(gtk_ghostty_application): setting GDK_DEBUG=
+warning(gtk_ghostty_application): setting GDK_DISABLE=gles-api,vulkan
+info(gtk_systemd_cgroup): transient scope created cgroup=/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-transient-5922.scope
+info(gtk_ghostty_application): cgroup isolation enabled base=/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-transient-5922.scope
+info(opengl): loaded OpenGL 4.6
+info(io_exec): found Ghostty resources dir: /nix/store/8fs7xs0qpwf1dx8dr9g47fa4f65wsnvk-ghostty-1.2.3/share/ghostty
+info(io_exec): shell integration automatically injected shell=termio.shell_integration.Shell.bash
+warning(gtk_ghostty_application): unimplemented action=apprt.action.Action.Key.cell_size
+info(io_exec): started subcommand path=/run/current-system/sw/bin/bash pid=5952
+info(io_exec): subcommand cgroup=/user.slice/user-1000.slice/user@1000.service/app.slice/app-ghostty-transient-5922.scope/surfaces/55C43E21C060.scope
+info(io_exec): pty fd closed, read thread exiting
+info(surface): surface closed addr=55c43f7ab550

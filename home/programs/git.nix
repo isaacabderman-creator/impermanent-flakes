@@ -1,11 +1,12 @@
 { pkgs, ... }: {
-  programs.git = {
+  programs.git.settings = {
     enable = true;
-    userName = "Your Name";
-    userEmail = "you@example.com";
-
+    user = {
+      name = "isaacabderman-creator";
+      mail = "isaacabderman@gmail.com";
+    };
     extraConfig = {
-      credential.helper = "${pkgs.gitCredentialLibsecret}/bin/git-credential-libsecret";
+      credential.helper = "store";
     };
   };
 }

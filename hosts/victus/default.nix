@@ -73,6 +73,8 @@
     btop
     iputils
     kitty
+    tree
+    ghostty
     lshw
     firefox
     nvtopPackages.nvidia
@@ -153,7 +155,7 @@
   services.greetd = {
     enable = true;
     settings.default_session = {
-      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+      command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
       user    = "greeter";
     };
   };
@@ -164,7 +166,8 @@
   #Keyring
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
- 
+  
+  services.tailscale.enable = true; 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
