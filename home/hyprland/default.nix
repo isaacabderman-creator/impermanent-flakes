@@ -1,4 +1,7 @@
 { config, pkgs, ... }: {
+  imports = [
+    ./waybar.nix
+  ];
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -6,11 +9,11 @@
       monitor = "eDP-1,2560x1440@165,0x0,1";
 
       general = {
-        gaps_in = 6;
-        gaps_out = 12;
+        gaps_in = 2;
+        gaps_out = 6;
         border_size = 2;
-        "col.active_border" = "rgba(00E5CCff)";
-        "col.inactive_border" = "rgba(1a1a2aff)";
+        "col.active_border" = "rgba(ffffffff)";
+        "col.inactive_border" = "rgba(777777ff)";
         layout = "dwindle";
       };
 
@@ -20,11 +23,7 @@
         inactive_opacity = 1.0;
         blur.enabled = false;
         shadow = {
-          enabled = true;
-          range = 1;
-          render_power = 1;
-          color = "rgba(00E5CCcc)";
-          offset = "4 4";
+          enabled = false;
         };
       };
 
@@ -59,6 +58,7 @@
       "$mod" = "SUPER";
 
       bind = [
+        "$mod, D, exec, wofi --show drun"
         "$mod, Return, exec, kitty"
         "$mod, T, exec, kitty"
         "$mod, E, exec, nautilus"
@@ -126,6 +126,7 @@
         "mako"
         "swww-daemon"
         "wl-paste --watch cliphist store"
+	"sleep 1 && swww img ~/Downloads/cave.jpg"
       ];
     };
 

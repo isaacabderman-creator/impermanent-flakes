@@ -8,66 +8,41 @@
   
   home.stateVersion = "25.11";  
   home.packages = with pkgs; [
-# Hyprland stack
-
-  swww
-
-  hyprlock
-
-  hypridle
-
-  hyprshot
-
-  # Bar + launcher
-
-  waybar
-
-  # Terminal
-
-  kitty
-
-  # Theming
-
-  matugen
-
-  # Notifications
-
-  mako
-
-  # File manager
-
-  yazi
-
-  # Clipboard
-
-  wl-clipboard
-
-  cliphist
-
-  # Audio
-
-  pavucontrol
-
-  networkmanagerapplet
-  pamixer
-  # System
-
-  nix-output-monitor
-
-  # Utilities
-
-  brightnessctl
-
-  playerctl
-
-  grim
-
-  slurp
-
-  wlsunset
-
-  # Fonts
-
-  nerd-fonts.jetbrains-mono
+    swww
+    hyprlock
+    hypridle
+    hyprshot
+    waybar
+    matugen
+    mako
+    yazi
+    wl-clipboard
+    cliphist
+    pavucontrol
+    networkmanagerapplet
+    pamixer
+    nix-output-monitor
+    brightnessctl
+    playerctl
+    grim
+    slurp
+    wlsunset
+    kdePackages.kdeconnect-kde
+    nerd-fonts.jetbrains-mono
   ];
+  programs.kitty = {
+    enable = true;
+    settings = {
+      confirm_os_window_close = 0;
+    };
+  };
+  programs.wofi = {
+    enable = true;
+    settings = {
+      width = 400;
+      height = 300;
+      location = "center";
+      show = "drun";
+    };
+  };
 }
