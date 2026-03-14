@@ -67,6 +67,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    unzip
     vim 
     killall
     wget

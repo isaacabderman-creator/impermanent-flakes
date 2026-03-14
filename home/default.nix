@@ -7,10 +7,7 @@
   home.username = "impermanent";
   home.homeDirectory = "/home/impermanent";
   home.file.".p10k.zsh".source = ./programs/p10k.zsh;
-  home.file.".local/share/fonts/Satoshi".source = pkgs.fetchurl {
-    url = "https://api.fontshare.com/v2/fonts/download/satoshi";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-  };
+  home.file.".local/share/fonts/Satoshi".source = ./programs/satoshi;
   home.stateVersion = "25.11";  
   home.packages = with pkgs; [
     swww

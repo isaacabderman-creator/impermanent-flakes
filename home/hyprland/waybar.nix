@@ -11,7 +11,7 @@
 			modules-center = ["clock"];
 			modules-right = ["cpu" "memory" "network" "pulseaudio" "battery" "tray"];
 			"clock"= {
-				"format"= "{=%H=%M}";
+				"format"= "{:%H:%M}";
 			};
 
 			"network"= {
@@ -48,7 +48,7 @@
 			};
     };
     style = ''
-      * { font-family: 'JetBrainsMono Nerd Font', monospace; font-size: 14px; }
+      * { font-family: 'Satoshi', 'JetBrainsMono Nerd Font', monospace; font-size: 14px; font-weight: 600; }
       window#waybar { background: #f0f0f0; color: #0066ff; padding: 0 18px; }
       #workspaces button { padding: 0 5px; color: #6372a4; }
       #workspaces button.active { color: #0066ff; }
