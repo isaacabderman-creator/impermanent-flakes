@@ -51,9 +51,11 @@
     variant = "";
   };
 
+  programs.zsh.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.impermanent = {
     isNormalUser = true;
+    shell = pkgs.zsh;
     description = "ANDRIANARIMANANA Isaac Abderman";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
@@ -65,7 +67,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim 
+    killall
     wget
     neovim
     git
@@ -82,7 +85,7 @@
     nerd-fonts.ubuntu
     nerd-fonts.jetbrains-mono
   ];
-
+  
   programs.hyprland.enable = true;
   services.geoclue2.enable = true;
   services.upower.enable = true;

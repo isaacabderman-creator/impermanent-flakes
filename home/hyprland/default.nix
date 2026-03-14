@@ -122,11 +122,10 @@
       ];
 
       exec-once = [
-        "waybar"
         "mako"
         "swww-daemon"
         "wl-paste --watch cliphist store"
-	"sleep 1 && swww img ~/Downloads/cave.jpg"
+	"sleep 1 && swww img ~/Downloads/nixos.jpg"
       ];
     };
 
