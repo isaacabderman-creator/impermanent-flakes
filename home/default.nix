@@ -10,6 +10,7 @@
   home.file.".local/share/fonts/Satoshi".source = ./programs/satoshi;
   home.stateVersion = "25.11";  
   home.packages = with pkgs; [
+    
     swww
     hyprlock
     hypridle
@@ -32,6 +33,9 @@
     kdePackages.kdeconnect-kde
     nerd-fonts.jetbrains-mono
   ];
+  environment.shellAliases = {
+    miaou = "echo 'Coucou Mme!'";
+  };
   programs.kitty = {
     enable = true;
     settings = {
